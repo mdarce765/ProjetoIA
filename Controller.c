@@ -24,7 +24,6 @@
 #define TIME_STEP 256
 #define QtddSensoresProx 8
 #define QtddLeds 10
-
 /*
  * This is the main program.
  * The arguments of the main function can be specified by the
@@ -107,16 +106,38 @@ int main(int argc, char **argv) {
      * Enter here functions to send actuator commands, like:
      * wb_motor_set_position(my_actuator, 10.0);
      */
-    
-    if(LeituraSensorProx[0]>100){
-      AceleradorDireito = -1;
-      AceleradorEsquerdo = 1;
-    }else {
-      AceleradorDireito = 1;
-      AceleradorEsquerdo = 1;
+    // sensores que importam ps0-ps2 e ps5-ps7
+    int sensores[6] = {LeituraSensorProx[0],LeituraSensorProx[1],LeituraSensorProx[2],LeituraSensorProx[5],
+    LeituraSensorProx[6],LeituraSensorProx[7]};
+    int timeout = 0;
+    for (int i = 0; i < 6;++i){
+       timeout = 0;
+       if(sensores[i]>30){
+        
+        AceleradorDireito = -1;
+        AceleradorEsquerdo = 1;
+        wb_motor_set_velocity(MotorEsquerdo,6.28*AceleradorEsquerdo);
+        wb_motor_set_velocity(MotorDireito, 6.28*AceleradorDireito);
+        double atual = wb_robot_get_time();
+        
+        while (wb_robot_get_time() - atual <= 1){
+            
+            wb_robot_step(TIME_STEP);
+        }
+        
+       
+        
+       }
+       else {
+        AceleradorDireito = 1;
+        AceleradorEsquerdo = 1;
+        wb_motor_set_velocity(MotorEsquerdo,6.28*AceleradorEsquerdo);
+        wb_motor_set_velocity(MotorDireito, 6.28*AceleradorDireito);
+      }
+      
     }
-    wb_motor_set_velocity(MotorEsquerdo,6.28*AceleradorEsquerdo);
-    wb_motor_set_velocity(MotorDireito, 6.28*AceleradorDireito);
+    
+    
   };
   /* Enter your cleanup code here */
 
