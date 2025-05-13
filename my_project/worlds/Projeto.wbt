@@ -1,0 +1,36 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position -0.07996321001533233 0.036844154376550246 2.490982276812663
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF PUCK E-puck {
+  hidden position_0_0 -3.057475203807716e-08
+  hidden position_0_1 9.248700800906442e-08
+  hidden rotation_1 0 -1 0 2.9802322387695313e-08
+  hidden rotation_2 0 1 0 9.424321830774485e-08
+  translation 0.25867871138291376 1.2757950709311062e-07 -6.396199560295551e-05
+  rotation 0.008521066921334568 7.852978679495307e-09 -0.9999636950502364 2.867231634152928e-07
+  controller "Rodrigo"
+  supervisor TRUE
+}
+DEF CAIXA CardboardBox {
+  translation 0 0 0.05
+  size 0.1 0.1 0.1
+}
+DEF CAIXA06 CardboardBox {
+  translation -0.25 0.24 0.05
+  name "cardboard box(1)"
+  size 0.1 0.1 0.1
+}
