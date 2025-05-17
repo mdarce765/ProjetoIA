@@ -3,7 +3,7 @@
 Murilo Darce Borges Silva - 24.122.031-8  
 Rodrigo Ruy Simões - 24.122.092-0
 
-Vídeo: https://youtu.be/APB1bcU0dy4
+[Vídeo do projeto](https://youtu.be/APB1bcU0dy4)
 
 Robô - E-Puck  
 Documentação: https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a  
