@@ -10,9 +10,7 @@ A simulação foi executada no mundo ".wbt" disponibilizado pelo professor, cham
 ### Imagem da simulação em execução
 ![image](https://github.com/user-attachments/assets/e1e6ce54-9570-4d16-8ea4-7282e0d3a7db)
 
-[Vídeo do projeto](https://youtu.be/APB1bcU0dy4)
-
-Robô - E-Puck  
-Documentação: https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a  
+[Vídeo do projeto](https://youtu.be/APB1bcU0dy4)  
+[Robô - E-Puck](https://www.cyberbotics.com/doc/guide/epuck?version=cyberbotics:R2019a)  
 Sensores:  
 ![image](https://github.com/user-attachments/assets/f688bf9d-4351-4168-981d-406714c6c922)
